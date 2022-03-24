@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CLIENT_RENEG_WINDOW } from 'tls';
 
 @Component({
   selector: 'candidates',
