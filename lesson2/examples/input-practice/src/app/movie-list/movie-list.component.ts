@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
    selector: 'movie-list',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
    movies = ['Toy Story', 'The Shining', 'Sleepless in Seattle', 'The Martian'];
+   
 
    constructor() { }
 
    ngOnInit() {
+   }
+
+   addMovie (newTitle: string){
+      if(!this.movies.includes(newTitle) && newTitle !== ""){
+         this.movies.push(newTitle);
+
+      }
    }
 }
