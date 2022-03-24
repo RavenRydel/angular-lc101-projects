@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CLIENT_RENEG_WINDOW } from 'tls';
 
 @Component({
   selector: 'candidates',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./candidates.component.css']
 })
 export class CandidatesComponent implements OnInit {
-   missionName = "LaunchCode Moonshot"
+  //  missionName = "LaunchCode Moonshot"
 
    candidates = [
     {name: 'Rusty Rutabaga', data: {age: 5, mass: '0.75 kg', sidekick: 'Blake'}, image: 'assets/images/Blake.png'},
@@ -23,10 +24,19 @@ export class CandidatesComponent implements OnInit {
   ngOnInit() {
   }
 
+  addToCrew (person: object) {
+    let crew = [];
+    if(!this.crew.includes(person)){
+      this.crew.push(person);
+    }
+  }
   // Code the addToCrew function here:
 
 
   // BONUS: Code the changeMissionName function here:
+  changeMissionName (name: string){
+    document.getElementById("titleName").innerText = name;
 
+  }
 
 }
