@@ -3,8 +3,9 @@ h3 {
 }
 
 img {
-   width: 40%;
+   width: 80%;
    height: auto;
+   padding: 5px;
 }
 
 .photos {
